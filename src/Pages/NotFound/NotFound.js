@@ -1,9 +1,11 @@
 import React from 'react';
+import errorPage from '../../Assets/error-page.jpg';
 
 const NotFound = () => {
     return (
         <div>
-            <h1>404</h1>
+            <img className='w-96 mx-auto my-auto mt-16' src={errorPage} alt="" />
+            <h1 className='text-center text-5xl font-bold'>Sorry, Page is not found !!</h1>
         </div>
     );
 };
