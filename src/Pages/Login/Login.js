@@ -15,7 +15,7 @@ const Login = () => {
                                 <input type="email" class="bg-indigo-50 px-4 py-2 outline-none rounded-md w-full" />
                             </div>
                             <div>
-                                <label for="email" class="block mb-1 text-gray-600 font-semibold">Password</label>
+                                <label for="password" class="block mb-1 text-gray-600 font-semibold">Password</label>
                                 <input type="password" class="bg-indigo-50 px-4 py-2 outline-none rounded-md w-full" />
                             </div>
                         </div>
