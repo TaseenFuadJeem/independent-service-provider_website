@@ -1,10 +1,16 @@
 import React from 'react';
 import photographer from '../../Assets/photographer.jpg';
+import pic1 from '../../Assets/pic1.jpg';
+import pic2 from '../../Assets/pic2.jpg';
+import pic3 from '../../Assets/pic3.jpg';
+import pic4 from '../../Assets/pic4.jpg';
+import pic5 from '../../Assets/pic5.jpg';
+import pic6 from '../../Assets/pic6.jpg';
 
 const Home = () => {
     return (
         <div className='lg:px-32'>
-            <div className='grid lg:grid-cols-2 my-16'>
+            <div className='grid lg:grid-cols-2 mt-16 mb-32'>
 
                 <div className='flex items-center'>
                     <div>
@@ -28,7 +34,53 @@ const Home = () => {
             </div>
 
             <div>
-                <h1 className='text-center text-2xl'>Explore my works</h1>
+                <h1 className='text-center text-4xl font-semibold'>Explore my works</h1>
+
+                <div className="container mx-auto p-8">
+                    <div className="flex flex-row flex-wrap -mx-2">
+                        <div className="w-full md:w-1/2 h-64 md:h-auto mb-4 px-2">
+                            <img className="block w-full h-full bg-grey-dark bg-no-repeat bg-center bg-cover" src={pic1} alt='' />
+
+
+                        </div>
+                        <div className="w-full md:w-1/2 mb-4 px-2">
+                            <div className="flex flex-col sm:flex-row md:flex-col -mx-2">
+
+                                <div className="w-full sm:w-1/2 md:w-full h-48 xl:h-64 mb-4 sm:mb-0 md:mb-4 px-2">
+
+                                    <img className="block w-full h-full bg-grey-dark bg-no-repeat bg-center bg-cover" src={pic2} alt='' />
+
+                                </div>
+
+                                <div className="w-full sm:w-1/2 md:w-full h-48 xl:h-64 px-2">
+
+                                    <img className="block w-full h-full bg-grey-dark bg-no-repeat bg-center bg-cover" src={pic3} alt="" />
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div className="w-full sm:w-1/3 h-32 md:h-48 mb-4 sm:mb-0 px-2">
+
+                            <img className="block w-full h-full bg-grey-dark bg-no-repeat bg-center bg-cover" src={pic4} alt="" />
+
+                        </div>
+
+                        <div className="w-full sm:w-1/3 h-32 md:h-48 mb-4 sm:mb-0 px-2">
+
+                            <img className="block w-full h-full bg-grey-dark bg-no-repeat bg-center bg-cover" src={pic5} alt="" />
+
+                        </div>
+
+                        <div className="w-full sm:w-1/3 h-32 md:h-48 px-2">
+
+                            <img className="block w-full h-full bg-grey-dark bg-no-repeat bg-center bg-cover" src={pic6} alt="" />
+
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
         </div>
