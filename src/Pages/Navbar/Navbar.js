@@ -1,7 +1,8 @@
 import React from 'react';
 import './Navbar.css';
 import { Link, NavLink } from 'react-router-dom';
-import logo from '../../Assets/logo.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCamera } from '@fortawesome/free-solid-svg-icons';
 
 const Navbar = () => {
     return (
@@ -10,9 +11,12 @@ const Navbar = () => {
             <nav className="bg-gray-200 shadow shadow-gray-300 w-100 px-8 md:px-auto">
                 <div className="md:h-16 h-28 mx-auto md:px-4 container flex items-center justify-between flex-wrap md:flex-nowrap">
 
-                    <div className="text-indigo-500 md:order-1">
-                        <img className='w-64' src={logo} alt="" />
-                    </div>
+                    <Link to="/home">
+                        <div className="text-indigo-500 md:order-1">
+                            <FontAwesomeIcon className='text-3xl' icon={faCamera}></FontAwesomeIcon>
+                        </div>
+                    </Link>
+
                     <div className="text-gray-500 order-3 w-full md:w-auto md:order-2">
                         <ul className="flex font-semibold justify-between">
 
@@ -24,6 +28,7 @@ const Navbar = () => {
                         </ul>
                     </div>
                     <div className="order-2 md:order-3">
+
                         <Link to="/login">
 
                             <button className="px-4 py-2 bg-indigo-500 hover:bg-indigo-600 text-gray-50 rounded-xl flex items-center gap-2">
@@ -35,6 +40,7 @@ const Navbar = () => {
                             </button>
 
                         </Link>
+
                     </div>
                 </div>
             </nav>
