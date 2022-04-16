@@ -1,4 +1,7 @@
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
+import { Link } from 'react-router-dom';
 import photographer from '../../Assets/photographer.jpg';
 import pic1 from '../../Assets/pic1.jpg';
 import pic2 from '../../Assets/pic2.jpg';
@@ -6,6 +9,10 @@ import pic3 from '../../Assets/pic3.jpg';
 import pic4 from '../../Assets/pic4.jpg';
 import pic5 from '../../Assets/pic5.jpg';
 import pic6 from '../../Assets/pic6.jpg';
+import logo1 from '../../Assets/logo1.png'
+import logo2 from '../../Assets/logo2.png'
+import logo3 from '../../Assets/logo3.png'
+import logo4 from '../../Assets/logo4.png'
 
 const Home = () => {
     return (
@@ -79,6 +86,27 @@ const Home = () => {
 
                         </div>
                     </div>
+                </div>
+
+                <Link to="/my-works">
+
+                    <button className=" block mx-auto bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded">
+                        Explore More <FontAwesomeIcon className='ml-1' icon={faArrowRight}></FontAwesomeIcon>
+                    </button>
+
+                </Link>
+
+            </div>
+
+            <div className='my-16'>
+
+                <h1 className='text-center text-4xl font-semibold '>Worked with top companies</h1>
+
+                <div className='lg:flex lg:items-center'>
+                    <img className='w-32 my-16 mx-auto' src={logo1} alt="" />
+                    <img className='w-32 my-16 mx-auto' src={logo2} alt="" />
+                    <img className='w-32 my-16 mx-auto' src={logo3} alt="" />
+                    <img className='w-32 my-16 mx-auto' src={logo4} alt="" />
                 </div>
 
             </div>
