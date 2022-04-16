@@ -39,7 +39,7 @@ const Home = () => {
                 <div className="container mx-auto p-8">
                     <div className="flex flex-row flex-wrap -mx-2">
                         <div className="w-full md:w-1/2 h-64 md:h-auto mb-4 px-2">
-                            <img className="block w-full h-full bg-grey-dark bg-no-repeat bg-center bg-cover" src={pic1} alt='' />
+                            <img className="rounded-lg block w-full h-full bg-grey-dark bg-no-repeat bg-center bg-cover" src={pic1} alt='' />
 
 
                         </div>
@@ -48,13 +48,13 @@ const Home = () => {
 
                                 <div className="w-full sm:w-1/2 md:w-full h-48 xl:h-64 mb-4 sm:mb-0 md:mb-4 px-2">
 
-                                    <img className="block w-full h-full bg-grey-dark bg-no-repeat bg-center bg-cover" src={pic2} alt='' />
+                                    <img className="rounded-lg block w-full h-full bg-grey-dark bg-no-repeat bg-center bg-cover" src={pic2} alt='' />
 
                                 </div>
 
                                 <div className="w-full sm:w-1/2 md:w-full h-48 xl:h-64 px-2">
 
-                                    <img className="block w-full h-full bg-grey-dark bg-no-repeat bg-center bg-cover" src={pic3} alt="" />
+                                    <img className="rounded-lg block w-full h-full bg-grey-dark bg-no-repeat bg-center bg-cover" src={pic3} alt="" />
 
                                 </div>
 
@@ -63,19 +63,19 @@ const Home = () => {
 
                         <div className="w-full sm:w-1/3 h-32 md:h-48 mb-4 sm:mb-0 px-2">
 
-                            <img className="block w-full h-full bg-grey-dark bg-no-repeat bg-center bg-cover" src={pic4} alt="" />
+                            <img className="rounded-lg block w-full h-full bg-grey-dark bg-no-repeat bg-center bg-cover" src={pic4} alt="" />
 
                         </div>
 
                         <div className="w-full sm:w-1/3 h-32 md:h-48 mb-4 sm:mb-0 px-2">
 
-                            <img className="block w-full h-full bg-grey-dark bg-no-repeat bg-center bg-cover" src={pic5} alt="" />
+                            <img className="rounded-lg block w-full h-full bg-grey-dark bg-no-repeat bg-center bg-cover" src={pic5} alt="" />
 
                         </div>
 
                         <div className="w-full sm:w-1/3 h-32 md:h-48 px-2">
 
-                            <img className="block w-full h-full bg-grey-dark bg-no-repeat bg-center bg-cover" src={pic6} alt="" />
+                            <img className="rounded-lg block w-full h-full bg-grey-dark bg-no-repeat bg-center bg-cover" src={pic6} alt="" />
 
                         </div>
                     </div>
