@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import Loading from '../Loading/Loading';
 
@@ -15,21 +15,21 @@ const Signup = () => {
         error,
     ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
 
+    const [signInWithGoogle, googleUser, googleLoading, googleError] = useSignInWithGoogle(auth);
+
     const navigate = useNavigate();
 
     const handleSignUp = event => {
         event.preventDefault();
     }
 
-    if (error) {
-        return (
-            <div>
-                <p>Error: {error.message}</p>
-            </div>
-        );
+    let errorElement;
+
+    if (error || googleError) {
+        errorElement = <p className='text-center text-red-600'>Something went wrong</p>
     }
 
-    if (user) {
+    if (user || googleUser) {
         navigate('/courses');
         alert('Your account successfully created')
     }
@@ -38,7 +38,7 @@ const Signup = () => {
         <div>
 
             {
-                loading ?
+                loading || googleLoading ?
 
                     <Loading></Loading>
 
@@ -49,6 +49,7 @@ const Signup = () => {
                             <div onSubmit={handleSignUp} className="bg-white px-10 py-8 rounded-xl w-screen shadow-md max-w-sm">
                                 <div className="space-y-4">
                                     <h1 className="text-center text-2xl font-semibold text-gray-600">Register</h1>
+                                    {errorElement}
                                     <div>
                                         <label htmlFor="username" className="block mb-1 text-gray-600 font-semibold">Username</label>
                                         <input type="text" required className="bg-indigo-50 px-4 py-2 outline-none rounded-md w-full" />
@@ -66,7 +67,7 @@ const Signup = () => {
 
                                 <p className='text-center my-2'>Or</p>
 
-                                <button className="w-full bg-gradient-to-tr bg-indigo-500  text-white py-2 rounded-md text-lg tracking-wide">Continue with Google</button>
+                                <button onClick={() => signInWithGoogle()} className="w-full bg-gradient-to-tr bg-indigo-500  text-white py-2 rounded-md text-lg tracking-wide">Continue with Google</button>
 
                                 <p className='text-center mt-3'>Already have an account? <Link className='text-indigo-700 font-bold' to="/login">Log in</Link></p>
 
