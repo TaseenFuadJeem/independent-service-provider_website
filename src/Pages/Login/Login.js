@@ -33,6 +33,10 @@ const Login = () => {
         errorElement = <p className='text-center text-red-600'>You entered a wrong password</p>
     }
 
+    if (error?.message === "Firebase: Error (auth/invalid-email).") {
+        errorElement = <p className='text-center text-red-600'>Invalid Email</p>
+    }
+
     if (error?.message === "Firebase: Error (auth/user-not-found).") {
         errorElement = <p className='text-center text-red-600'>No user found. Please check your E-mail</p>
     }
