@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './Login.css';
 import { Link, useNavigate } from 'react-router-dom';
 import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
@@ -66,8 +67,8 @@ const Login = () => {
                     :
 
                     <div className="h-screen bg-gradient-to-br from-blue-300 to-indigo-600 flex justify-center items-center w-full">
-                        <form onSubmit={handleLogin}>
-                            <div className="bg-white px-10 py-8 rounded-xl w-screen shadow-md max-w-sm">
+                        <form className='login-form' onSubmit={handleLogin}>
+                            <div className="bg-white px-10 login-form py-8 rounded-xl w-screen shadow-md max-w-sm">
                                 <div className="space-y-4">
                                     <h1 className="text-center text-2xl font-semibold text-gray-600">LOG IN</h1>
                                     {errorElement}

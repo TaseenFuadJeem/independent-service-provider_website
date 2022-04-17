@@ -12,7 +12,7 @@ const AboutMe = () => {
 
             <div className=" h-screen w-full flex flex-row justify-center items-center">
                 <div className="card w-2/5 mx-auto bg-gray-300 shadow-xl hover:shadow rounded-lg profile-card">
-                    <img className="w-64 mx-auto rounded-full -mt-20 border-8 border-gray-300" src={developer} alt="" />
+                    <img className="w-64 profile-photo mx-auto rounded-full -mt-20 border-8 border-gray-300" src={developer} alt="" />
                     <div className="text-center mt-2 text-3xl font-medium">Md. Ta-Seen Fuad Jeem</div>
                     <div className="text-center my-2 font-light text-sm"><FontAwesomeIcon className='mr-2' icon={faLaptopCode}></FontAwesomeIcon>Junior Web-Developer</div>
                     <div className="text-center  font-light text-sm"><FontAwesomeIcon className='mr-2' icon={faLocationDot}></FontAwesomeIcon>Dhaka, Bangladesh</div>
