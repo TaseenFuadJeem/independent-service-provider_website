@@ -1,8 +1,9 @@
 import React from 'react';
+import './Blogs.css';
 
 const Blogs = () => {
     return (
-        <div className='lg:px-32'>
+        <div className='lg:px-32 blog-container'>
 
             <div className='p-10 border-2 rounded-lg border-gray-300 my-20'>
 
