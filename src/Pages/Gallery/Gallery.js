@@ -9,26 +9,26 @@ const Gallery = () => {
 
             <div className='grid lg:grid-cols-4 lg:gap-5 mb-10 mt-16 photo-gallery'>
 
-                <img className='rounded-lg mt-5 mx-auto' src="https://cdn.pixabay.com/photo/2015/10/30/20/13/sunrise-1014712__340.jpg" alt="" />
-                <img className='rounded-lg mt-5 mx-auto' src="https://cdn.pixabay.com/photo/2015/04/23/22/01/mountains-736886__340.jpg" alt="" />
-                <img className='rounded-lg mt-5 mx-auto' src="https://cdn.pixabay.com/photo/2017/05/09/03/46/alberta-2297204__340.jpg" alt="" />
-                <img className='rounded-lg mt-5 mx-auto' src="https://cdn.pixabay.com/photo/2015/06/19/21/24/avenue-815297__340.jpg" alt="" />
-                <img className='rounded-lg mt-5 mx-auto' src="https://cdn.pixabay.com/photo/2013/11/28/10/36/road-220058__340.jpg" alt="" />
-                <img className='rounded-lg mt-5 mx-auto' src="https://cdn.pixabay.com/photo/2017/10/10/07/48/hills-2836301__340.jpg" alt="" />
-                <img className='rounded-lg mt-5 mx-auto' src="https://cdn.pixabay.com/photo/2014/01/22/19/44/flower-field-250016__340.jpg" alt="" />
-                <img className='rounded-lg mt-5 mx-auto' src="https://cdn.pixabay.com/photo/2017/12/15/13/51/polynesia-3021072__340.jpg" alt="" />
-                <img className='rounded-lg mt-5 mx-auto' src="https://cdn.pixabay.com/photo/2015/07/05/10/18/tree-832079__340.jpg" alt="" />
-                <img className='rounded-lg mt-5 mx-auto' src="https://cdn.pixabay.com/photo/2016/02/13/12/26/aurora-1197753__340.jpg" alt="" />
-                <img className='rounded-lg mt-5 mx-auto' src="https://cdn.pixabay.com/photo/2013/07/18/10/56/railroad-163518__340.jpg" alt="" />
-                <img className='rounded-lg mt-5 mx-auto' src="https://cdn.pixabay.com/photo/2017/04/09/09/56/avenue-2215317__340.jpg" alt="" />
-                <img className='rounded-lg mt-5 mx-auto' src="https://cdn.pixabay.com/photo/2021/09/20/21/32/lake-6641880__340.jpg" alt="" />
-                <img className='rounded-lg mt-5 mx-auto' src="https://cdn.pixabay.com/photo/2021/08/08/20/37/mountains-6531903__340.jpg" alt="" />
-                <img className='rounded-lg mt-5 mx-auto' src="https://cdn.pixabay.com/photo/2017/03/02/16/54/iceland-2111811__340.jpg" alt="" />
-                <img className='rounded-lg mt-5 mx-auto' src="https://cdn.pixabay.com/photo/2021/08/08/10/34/ocean-6530523__340.jpg" alt="" />
-                <img className='rounded-lg mt-5 mx-auto' src="https://cdn.pixabay.com/photo/2014/09/07/22/17/forest-438432__340.jpg" alt="" />
-                <img className='rounded-lg mt-5 mx-auto' src="https://cdn.pixabay.com/photo/2014/07/28/20/39/sunset-404072__340.jpg" alt="" />
-                <img className='rounded-lg mt-5 mx-auto' src="https://cdn.pixabay.com/photo/2014/05/22/16/52/pyrenees-351266__340.jpg" alt="" />
-                <img className='rounded-lg mt-5 mx-auto' src="https://cdn.pixabay.com/photo/2017/02/19/15/28/sunset-2080072__340.jpg" alt="" />
+                <img className='rounded-lg mt-5 mx-auto lg:hover:scale-150 transition ease-in duration-300' src="https://cdn.pixabay.com/photo/2015/10/30/20/13/sunrise-1014712__340.jpg" alt="" />
+                <img className='rounded-lg mt-5 mx-auto lg:hover:scale-150 transition ease-in duration-300' src="https://cdn.pixabay.com/photo/2015/04/23/22/01/mountains-736886__340.jpg" alt="" />
+                <img className='rounded-lg mt-5 mx-auto lg:hover:scale-150 transition ease-in duration-300' src="https://cdn.pixabay.com/photo/2017/05/09/03/46/alberta-2297204__340.jpg" alt="" />
+                <img className='rounded-lg mt-5 mx-auto lg:hover:scale-150 transition ease-in duration-300' src="https://cdn.pixabay.com/photo/2015/06/19/21/24/avenue-815297__340.jpg" alt="" />
+                <img className='rounded-lg mt-5 mx-auto lg:hover:scale-150 transition ease-in duration-300' src="https://cdn.pixabay.com/photo/2013/11/28/10/36/road-220058__340.jpg" alt="" />
+                <img className='rounded-lg mt-5 mx-auto lg:hover:scale-150 transition ease-in duration-300' src="https://cdn.pixabay.com/photo/2017/10/10/07/48/hills-2836301__340.jpg" alt="" />
+                <img className='rounded-lg mt-5 mx-auto lg:hover:scale-150 transition ease-in duration-300' src="https://cdn.pixabay.com/photo/2014/01/22/19/44/flower-field-250016__340.jpg" alt="" />
+                <img className='rounded-lg mt-5 mx-auto lg:hover:scale-150 transition ease-in duration-300' src="https://cdn.pixabay.com/photo/2017/12/15/13/51/polynesia-3021072__340.jpg" alt="" />
+                <img className='rounded-lg mt-5 mx-auto lg:hover:scale-150 transition ease-in duration-300' src="https://cdn.pixabay.com/photo/2015/07/05/10/18/tree-832079__340.jpg" alt="" />
+                <img className='rounded-lg mt-5 mx-auto lg:hover:scale-150 transition ease-in duration-300' src="https://cdn.pixabay.com/photo/2016/02/13/12/26/aurora-1197753__340.jpg" alt="" />
+                <img className='rounded-lg mt-5 mx-auto lg:hover:scale-150 transition ease-in duration-300' src="https://cdn.pixabay.com/photo/2013/07/18/10/56/railroad-163518__340.jpg" alt="" />
+                <img className='rounded-lg mt-5 mx-auto lg:hover:scale-150 transition ease-in duration-300' src="https://cdn.pixabay.com/photo/2017/04/09/09/56/avenue-2215317__340.jpg" alt="" />
+                <img className='rounded-lg mt-5 mx-auto lg:hover:scale-150 transition ease-in duration-300' src="https://cdn.pixabay.com/photo/2021/09/20/21/32/lake-6641880__340.jpg" alt="" />
+                <img className='rounded-lg mt-5 mx-auto lg:hover:scale-150 transition ease-in duration-300' src="https://cdn.pixabay.com/photo/2021/08/08/20/37/mountains-6531903__340.jpg" alt="" />
+                <img className='rounded-lg mt-5 mx-auto lg:hover:scale-150 transition ease-in duration-300' src="https://cdn.pixabay.com/photo/2017/03/02/16/54/iceland-2111811__340.jpg" alt="" />
+                <img className='rounded-lg mt-5 mx-auto lg:hover:scale-150 transition ease-in duration-300' src="https://cdn.pixabay.com/photo/2021/08/08/10/34/ocean-6530523__340.jpg" alt="" />
+                <img className='rounded-lg mt-5 mx-auto lg:hover:scale-150 transition ease-in duration-300' src="https://cdn.pixabay.com/photo/2014/09/07/22/17/forest-438432__340.jpg" alt="" />
+                <img className='rounded-lg mt-5 mx-auto lg:hover:scale-150 transition ease-in duration-300' src="https://cdn.pixabay.com/photo/2014/07/28/20/39/sunset-404072__340.jpg" alt="" />
+                <img className='rounded-lg mt-5 mx-auto lg:hover:scale-150 transition ease-in duration-300' src="https://cdn.pixabay.com/photo/2014/05/22/16/52/pyrenees-351266__340.jpg" alt="" />
+                <img className='rounded-lg mt-5 mx-auto lg:hover:scale-150 transition ease-in duration-300' src="https://cdn.pixabay.com/photo/2017/02/19/15/28/sunset-2080072__340.jpg" alt="" />
 
             </div>
 
