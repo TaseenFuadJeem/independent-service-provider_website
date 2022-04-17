@@ -1,30 +1,49 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import Loading from '../Loading/Loading';
 
 const Login = () => {
 
-    const [signInWithGoogle, user, googleLoading, error] = useSignInWithGoogle(auth);
-    const navigate = useNavigate();
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [
+        signInWithEmailAndPassword,
+        user,
+        loading,
+        error,
+    ] = useSignInWithEmailAndPassword(auth);
 
+    const [signInWithGoogle, googleUser, googleLoading, googleError] = useSignInWithGoogle(auth);
+
+    const navigate = useNavigate();
 
     let errorElement;
 
-    if (error?.message === "Firebase: Error (auth/popup-closed-by-user).") {
+    if (googleError?.message === "Firebase: Error (auth/popup-closed-by-user).") {
         errorElement = <p className='text-center text-red-600'>You closed the popup</p>
     }
 
-    if (user) {
+    if (error?.message === "Firebase: Error (auth/wrong-password).") {
+        errorElement = <p className='text-center text-red-600'>You entered a wrong password</p>
+    }
+
+    if (error?.message === "Firebase: Error (auth/user-not-found).") {
+        errorElement = <p className='text-center text-red-600'>You entered a wrong E-mail</p>
+    }
+
+    if (googleUser || user) {
         navigate('/courses')
     }
+
 
     return (
         <div>
 
             {
-                googleLoading ?
+                googleLoading || loading ?
 
                     <Loading></Loading>
 
@@ -38,14 +57,14 @@ const Login = () => {
                                     {errorElement}
                                     <div>
                                         <label htmlFor="email" className="block mb-1 text-gray-600 font-semibold">Email</label>
-                                        <input type="email" className="bg-indigo-50 px-4 py-2 outline-none rounded-md w-full" />
+                                        <input onChange={(e) => setEmail(e.target.value)} type="email" className="bg-indigo-50 px-4 py-2 outline-none rounded-md w-full" />
                                     </div>
                                     <div>
                                         <label htmlFor="password" className="block mb-1 text-gray-600 font-semibold">Password</label>
-                                        <input type="password" className="bg-indigo-50 px-4 py-2 outline-none rounded-md w-full" />
+                                        <input onChange={(e) => setPassword(e.target.value)} type="password" className="bg-indigo-50 px-4 py-2 outline-none rounded-md w-full" />
                                     </div>
                                 </div>
-                                <button className="mt-4 w-full bg-gradient-to-tr bg-indigo-500  text-white py-2 rounded-md text-lg tracking-wide">Log in</button>
+                                <button onClick={() => signInWithEmailAndPassword(email, password)} className="mt-4 w-full bg-gradient-to-tr bg-indigo-500  text-white py-2 rounded-md text-lg tracking-wide">Log in</button>
 
                                 <p className='text-center my-2'>Or</p>
 
