@@ -15,7 +15,6 @@ const Services = () => {
         userEmail = user?.email;
     }
 
-    console.log(user);
 
     return (
         <>
