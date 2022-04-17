@@ -13,11 +13,14 @@ const Login = () => {
     const [signInWithEmailAndPassword, user, loading, error,] = useSignInWithEmailAndPassword(auth);
     const [sendPasswordResetEmail, sending, resetError] = useSendPasswordResetEmail(auth);
 
+    console.log(email);
+
     const [signInWithGoogle, googleUser, googleLoading, googleError] = useSignInWithGoogle(auth);
 
     const navigate = useNavigate();
 
-    if (resetError) {
+
+    if (error) {
         return (
             <div>
                 <p>Error: {error.message}</p>
@@ -39,6 +42,11 @@ const Login = () => {
     if (error?.message === "Firebase: Error (auth/user-not-found).") {
         errorElement = <p className='text-center text-red-600'>You entered a wrong E-mail</p>
     }
+
+    if (resetError?.message === "Firebase: Error (auth/missing-email).") {
+        errorElement = <p className='text-center text-red-600'>Please enter your E-mail then reset your password</p>
+    }
+
 
     if (googleUser || user) {
         navigate('/courses')
@@ -69,8 +77,13 @@ const Login = () => {
                                         <label htmlFor="password" className="block mb-1 text-gray-600 font-semibold">Password</label>
                                         <input onChange={(e) => setPassword(e.target.value)} type="password" className="bg-indigo-50 px-4 py-2 outline-none rounded-md w-full" />
                                         <button onClick={async () => {
-                                            await sendPasswordResetEmail(email);
-                                            alert('Sent email');
+                                            if (email === "") {
+                                                alert('Please enter your E-mail then reset your password')
+                                            }
+                                            else {
+                                                await sendPasswordResetEmail(email);
+                                                alert('Sent email');
+                                            }
                                         }}
                                             className='text-sm my-1 btn-disable text-gray-400 hover:text-gray-600'>Reset password</button>
                                     </div>
