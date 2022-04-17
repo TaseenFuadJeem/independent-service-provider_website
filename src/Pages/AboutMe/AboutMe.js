@@ -8,7 +8,7 @@ import linkedinLogo from '../../Assets/linkedin.png';
 
 const AboutMe = () => {
     return (
-        <div>
+        <div className='py-12'>
 
             <div className=" h-screen w-full flex flex-row justify-center items-center">
                 <div className="card w-2/5 mx-auto bg-gray-300 shadow-xl hover:shadow rounded-lg profile-card">
