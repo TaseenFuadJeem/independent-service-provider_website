@@ -5,6 +5,9 @@ import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { useSendPasswordResetEmail } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import Loading from '../Loading/Loading';
+import { ToastContainer, toast } from 'react-toastify';
+
+import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
 
@@ -20,15 +23,6 @@ const Login = () => {
     const navigate = useNavigate();
 
 
-    if (error) {
-        return (
-            <div>
-                <p>Error: {error.message}</p>
-            </div>
-        );
-    }
-
-
     let errorElement;
 
     if (googleError?.message === "Firebase: Error (auth/popup-closed-by-user).") {
@@ -40,7 +34,7 @@ const Login = () => {
     }
 
     if (error?.message === "Firebase: Error (auth/user-not-found).") {
-        errorElement = <p className='text-center text-red-600'>You entered a wrong E-mail</p>
+        errorElement = <p className='text-center text-red-600'>No user found. Please check your E-mail</p>
     }
 
     if (resetError?.message === "Firebase: Error (auth/missing-email).") {
@@ -50,6 +44,10 @@ const Login = () => {
 
     if (googleUser || user) {
         navigate('/courses')
+    }
+
+    const handleLogin = event => {
+        event.preventDefault();
     }
 
 
@@ -64,7 +62,7 @@ const Login = () => {
                     :
 
                     <div className="h-screen bg-gradient-to-br from-blue-400 to-indigo-500 flex justify-center items-center w-full">
-                        <form>
+                        <form onSubmit={handleLogin}>
                             <div className="bg-white px-10 py-8 rounded-xl w-screen shadow-md max-w-sm">
                                 <div className="space-y-4">
                                     <h1 className="text-center text-2xl font-semibold text-gray-600">LOG IN</h1>
@@ -78,14 +76,15 @@ const Login = () => {
                                         <input onChange={(e) => setPassword(e.target.value)} type="password" className="bg-indigo-50 px-4 py-2 outline-none rounded-md w-full" />
                                         <button onClick={async () => {
                                             if (email === "") {
-                                                alert('Please enter your E-mail then reset your password')
+                                                toast('Please enter your E-mail then reset your password')
                                             }
                                             else {
                                                 await sendPasswordResetEmail(email);
-                                                alert('Sent email');
+                                                toast('Sent email');
                                             }
                                         }}
                                             className='text-sm my-1 btn-disable text-gray-400 hover:text-gray-600'>Reset password</button>
+                                        <ToastContainer></ToastContainer>
                                     </div>
                                 </div>
                                 <button onClick={() => signInWithEmailAndPassword(email, password)} className="mt-4 w-full bg-gradient-to-tr bg-indigo-500  text-white py-2 rounded-md text-lg tracking-wide">Log in</button>
