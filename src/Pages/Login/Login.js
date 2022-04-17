@@ -6,12 +6,9 @@ import Loading from '../Loading/Loading';
 
 const Login = () => {
 
-    const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
+    const [signInWithGoogle, user, googleLoading, error] = useSignInWithGoogle(auth);
     const navigate = useNavigate();
 
-    // if (loading) {
-    //     return <p>Loading...</p>;
-    // }
 
     let errorElement;
 
@@ -27,7 +24,7 @@ const Login = () => {
         <div>
 
             {
-                loading ?
+                googleLoading ?
 
                     <Loading></Loading>
 
