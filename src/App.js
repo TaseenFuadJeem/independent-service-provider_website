@@ -5,11 +5,11 @@ import Blogs from './Pages/Blogs/Blogs';
 import Footer from './Pages/Footer/Footer';
 import Home from './Pages/Home/Home';
 import Login from './Pages/Login/Login';
-import MyWorks from './Pages/MyWorks/MyWorks';
+import Gallery from './Pages/Gallery/Gallery';
 import Navbar from './Pages/Navbar/Navbar';
 import NotFound from './Pages/NotFound/NotFound';
 import RequireAuth from './Pages/RequireAuth/RequireAuth';
-import Services from './Pages/Services/Services';
+import Courses from './Pages/Courses/Courses';
 import Signup from './Pages/Signup/Signup';
 
 function App() {
@@ -27,10 +27,10 @@ function App() {
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/courses' element={
           <RequireAuth>
-            <Services></Services>
+            <Courses></Courses>
           </RequireAuth>
         }></Route>
-        <Route path='/my-works' element={<MyWorks></MyWorks>}></Route>
+        <Route path='/my-works' element={<Gallery></Gallery>}></Route>
         <Route path='/about-me' element={<AboutMe></AboutMe>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
 

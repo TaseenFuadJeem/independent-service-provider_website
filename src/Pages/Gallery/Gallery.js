@@ -1,7 +1,7 @@
 import React from 'react';
-import './MyWorks.css';
+import './Gallery.css';
 
-const MyWorks = () => {
+const Gallery = () => {
     return (
         <div className='lg:px-32'>
 
@@ -58,4 +58,4 @@ const MyWorks = () => {
     );
 };
 
-export default MyWorks;
+export default Gallery;

@@ -5,7 +5,7 @@ import course2 from '../../Assets/course2.jpg';
 import course3 from '../../Assets/course3.jpg';
 import auth from '../../firebase.init';
 
-const Services = () => {
+const Courses = () => {
 
     const [user] = useAuthState(auth);
 
@@ -76,4 +76,4 @@ const Services = () => {
     );
 };
 
-export default Services;
+export default Courses;

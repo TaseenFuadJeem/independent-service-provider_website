@@ -29,7 +29,7 @@ const Navbar = () => {
                         <ul className="flex font-semibold justify-between">
 
                             <li className="md:px-4 md:py-2 hover:text-indigo-400"><NavLink to="/home">Home</NavLink></li>
-                            <li className="md:px-4 md:py-2 hover:text-indigo-400"><NavLink to="/my-works">My Works</NavLink></li>
+                            <li className="md:px-4 md:py-2 hover:text-indigo-400"><NavLink to="/my-works">Gallery</NavLink></li>
                             <li className="md:px-4 md:py-2 hover:text-indigo-400"><NavLink to="/blogs">Blogs</NavLink></li>
                             <li className="md:px-4 md:py-2 hover:text-indigo-400"><NavLink to="/courses">Courses</NavLink></li>
                             <li className="md:px-4 md:py-2 hover:text-indigo-400"><NavLink to="/about-me">About</NavLink></li>
