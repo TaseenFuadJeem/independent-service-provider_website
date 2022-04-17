@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useSendPasswordResetEmail } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import Loading from '../Loading/Loading';
 
@@ -9,16 +10,21 @@ const Login = () => {
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [
-        signInWithEmailAndPassword,
-        user,
-        loading,
-        error,
-    ] = useSignInWithEmailAndPassword(auth);
+    const [signInWithEmailAndPassword, user, loading, error,] = useSignInWithEmailAndPassword(auth);
+    const [sendPasswordResetEmail, sending, resetError] = useSendPasswordResetEmail(auth);
 
     const [signInWithGoogle, googleUser, googleLoading, googleError] = useSignInWithGoogle(auth);
 
     const navigate = useNavigate();
+
+    if (resetError) {
+        return (
+            <div>
+                <p>Error: {error.message}</p>
+            </div>
+        );
+    }
+
 
     let errorElement;
 
@@ -43,7 +49,7 @@ const Login = () => {
         <div>
 
             {
-                googleLoading || loading ?
+                googleLoading || loading || sending ?
 
                     <Loading></Loading>
 
@@ -62,6 +68,11 @@ const Login = () => {
                                     <div>
                                         <label htmlFor="password" className="block mb-1 text-gray-600 font-semibold">Password</label>
                                         <input onChange={(e) => setPassword(e.target.value)} type="password" className="bg-indigo-50 px-4 py-2 outline-none rounded-md w-full" />
+                                        <button onClick={async () => {
+                                            await sendPasswordResetEmail(email);
+                                            alert('Sent email');
+                                        }}
+                                            className='text-sm my-1 btn-disable text-gray-400 hover:text-gray-600'>Reset password</button>
                                     </div>
                                 </div>
                                 <button onClick={() => signInWithEmailAndPassword(email, password)} className="mt-4 w-full bg-gradient-to-tr bg-indigo-500  text-white py-2 rounded-md text-lg tracking-wide">Log in</button>
