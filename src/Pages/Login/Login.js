@@ -65,7 +65,7 @@ const Login = () => {
 
                     :
 
-                    <div className="h-screen bg-gradient-to-br from-blue-400 to-indigo-500 flex justify-center items-center w-full">
+                    <div className="h-screen bg-gradient-to-br from-blue-300 to-indigo-600 flex justify-center items-center w-full">
                         <form onSubmit={handleLogin}>
                             <div className="bg-white px-10 py-8 rounded-xl w-screen shadow-md max-w-sm">
                                 <div className="space-y-4">
@@ -84,7 +84,7 @@ const Login = () => {
                                             }
                                             else {
                                                 await sendPasswordResetEmail(email);
-                                                toast('Sent email');
+                                                toast('Sent reset link. Check your E-mail');
                                             }
                                         }}
                                             className='text-sm my-1 btn-disable text-gray-400 hover:text-gray-600'>Reset password</button>

@@ -44,7 +44,7 @@ const Signup = () => {
 
                     :
 
-                    <div className="h-screen bg-gradient-to-br from-blue-400 to-indigo-500 flex justify-center items-center w-full">
+                    <div className="h-screen bg-gradient-to-br from-blue-300 to-indigo-600 flex justify-center items-center w-full">
                         <form>
                             <div onSubmit={handleSignUp} className="bg-white px-10 py-8 rounded-xl w-screen shadow-md max-w-sm">
                                 <div className="space-y-4">
