@@ -1,7 +1,27 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
 
 const Login = () => {
+
+    const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
+    const navigate = useNavigate();
+
+    if (loading) {
+        return <p>Loading...</p>;
+    }
+
+    let errorElement;
+
+    if (error) {
+        errorElement = <p className='text-center text-red-600'>Error: {error.message}</p>
+    }
+
+    if (user) {
+        navigate('/home')
+    }
+
     return (
         <div>
 
@@ -10,6 +30,7 @@ const Login = () => {
                     <div className="bg-white px-10 py-8 rounded-xl w-screen shadow-md max-w-sm">
                         <div className="space-y-4">
                             <h1 className="text-center text-2xl font-semibold text-gray-600">LOG IN</h1>
+                            {errorElement}
                             <div>
                                 <label htmlFor="email" className="block mb-1 text-gray-600 font-semibold">Email</label>
                                 <input type="email" className="bg-indigo-50 px-4 py-2 outline-none rounded-md w-full" />
@@ -23,7 +44,7 @@ const Login = () => {
 
                         <p className='text-center my-2'>Or</p>
 
-                        <button className="w-full bg-gradient-to-tr bg-indigo-500  text-white py-2 rounded-md text-lg tracking-wide">Continue with Google</button>
+                        <button onClick={() => signInWithGoogle()} className="w-full bg-gradient-to-tr bg-indigo-500  text-white py-2 rounded-md text-lg tracking-wide">Continue with Google</button>
 
                         <p className='text-center mt-3'>Don't have an account? <Link className='text-indigo-700 font-bold' to="/signup">Register</Link></p>
 
