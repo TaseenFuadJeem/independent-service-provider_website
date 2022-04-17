@@ -13,6 +13,7 @@ import logo1 from '../../Assets/logo1.png'
 import logo2 from '../../Assets/logo2.png'
 import logo3 from '../../Assets/logo3.png'
 import logo4 from '../../Assets/logo4.png'
+import './Home.css';
 
 const Home = () => {
     return (
@@ -20,7 +21,7 @@ const Home = () => {
             <div className='grid lg:grid-cols-2 mt-16 mb-32'>
 
                 <div className='flex items-center'>
-                    <div>
+                    <div className='description'>
                         <h1 className='text-5xl font-bold text-indigo-500'>IF YOU KNOW ME,</h1>
                         <h1 className='text-5xl font-bold text-indigo-500'>YOU KNOW MY STORY.</h1>
                         <p className='my-10'>
@@ -35,7 +36,7 @@ const Home = () => {
                 </div>
 
                 <div>
-                    <img className='w-3/5 rounded-lg shadow-2xl mx-auto lg:mr-5' src={photographer} alt="Photographer" />
+                    <img className='description-img w-3/5 rounded-lg shadow-2xl mx-auto lg:mr-5' src={photographer} alt="Photographer" />
                 </div>
 
             </div>
