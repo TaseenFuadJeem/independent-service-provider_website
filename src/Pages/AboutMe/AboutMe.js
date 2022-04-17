@@ -10,7 +10,7 @@ const AboutMe = () => {
     return (
         <div>
 
-            <div className=" font-sans h-screen w-full flex flex-row justify-center items-center">
+            <div className=" h-screen w-full flex flex-row justify-center items-center">
                 <div className="card w-2/5 mx-auto bg-gray-300 shadow-xl hover:shadow rounded-lg profile-card">
                     <img className="w-64 mx-auto rounded-full -mt-20 border-8 border-gray-300" src={developer} alt="" />
                     <div className="text-center mt-2 text-3xl font-medium">Md. Ta-Seen Fuad Jeem</div>
