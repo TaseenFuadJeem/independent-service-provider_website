@@ -9,10 +9,10 @@ import pic3 from '../../Assets/pic3.jpg';
 import pic4 from '../../Assets/pic4.jpg';
 import pic5 from '../../Assets/pic5.jpg';
 import pic6 from '../../Assets/pic6.jpg';
-import logo1 from '../../Assets/logo1.png'
-import logo2 from '../../Assets/logo2.png'
-import logo3 from '../../Assets/logo3.png'
-import logo4 from '../../Assets/logo4.png'
+import logo1 from '../../Assets/logo1.png';
+import logo2 from '../../Assets/logo2.png';
+import logo3 from '../../Assets/logo3.png';
+import logo4 from '../../Assets/logo4.png';
 import './Home.css';
 
 const Home = () => {
