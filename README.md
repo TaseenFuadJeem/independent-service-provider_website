@@ -27,6 +27,7 @@ Let's talk about the features of this web application,
 * Blogs route has some question and answerers.
 * The Course route is __protected__ with login. You must have to login first to access the courses. This route has some free photography courses from Steve Rogers.
 * In the about route, you can learn about The __Developer__ of this website.
+* It has a footer with useful links. 
 * The last route is login. You can login there with your email and password.
 * You can also login with Google.
 * This application is optimized for Large devices and mobile devices ONLY.

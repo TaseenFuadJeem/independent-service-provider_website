@@ -102,12 +102,13 @@ const Login = () => {
                                     {errorElement}
                                     <div>
                                         <label htmlFor="email" className="block mb-1 text-gray-600 font-semibold">Email</label>
-                                        <input onChange={(e) => setEmail(e.target.value)} type="email" className="bg-indigo-50 px-4 py-2 outline-none rounded-md w-full" />
+
+                                        <input required onChange={(e) => setEmail(e.target.value)} type="email" className="bg-indigo-50 px-4 py-2 outline-none rounded-md w-full" />
                                     </div>
                                     <div>
                                         <label htmlFor="password" className="block mb-1 text-gray-600 font-semibold">Password</label>
 
-                                        <input onChange={(e) => setPassword(e.target.value)} type="password" className="bg-indigo-50 px-4 py-2 outline-none rounded-md w-full" />
+                                        <input required onChange={(e) => setPassword(e.target.value)} type="password" className="bg-indigo-50 px-4 py-2 outline-none rounded-md w-full" />
 
                                         <button onClick={openModal}
                                             className='text-sm my-1 btn-disable text-gray-400 hover:text-gray-600'>Reset password</button>
