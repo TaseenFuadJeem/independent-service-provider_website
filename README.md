@@ -14,6 +14,7 @@ The tools i used for this project :
 * Also used React-firebase-hook for easy authentication.
 * React-toastify is used for displaying toast.
 * For modal, I applied React-Modal npm.
+* I used pixabay API for gallery.
 
 ## Features
 
