@@ -19,6 +19,8 @@ const customStyles = {
         marginRight: '-50%',
         transform: 'translate(-50%, -50%)',
         borderRadius: '20px',
+        backgroundColor: '#1F2937',
+        padding: "35px",
 
     },
 };
@@ -117,11 +119,11 @@ const Login = () => {
                                             contentLabel="Example Modal"
                                         >
 
-                                            <h1 className='text-center text-3xl font-bold'>🤔 Are you sure for reset your password?</h1>
+                                            <h1 className='text-center text-white text-xl font-bold'>🤔 Are you sure for reset your password?</h1>
 
                                             <div className='flex justify-evenly mt-10'>
 
-                                                <button className="px-4 py-2 bg-indigo-500 hover:bg-indigo-600 text-gray-50 rounded-xl flex items-center gap-2" onClick={async () => {
+                                                <button className="border border-white text-white rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-white hover:text-black focus:outline-none focus:shadow-outline" onClick={async () => {
                                                     if (email === "") {
                                                         toast('Please enter your E-mail then reset your password')
                                                     }
@@ -131,7 +133,7 @@ const Login = () => {
                                                     }
                                                 }} >Yes!!</button>
 
-                                                <button className="px-4 py-2 bg-indigo-500 hover:bg-indigo-600 text-gray-50 rounded-xl flex items-center gap-2" onClick={closeModal}>cancel</button>
+                                                <button className="border border-white text-white rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-white hover:text-black focus:outline-none focus:shadow-outline" onClick={closeModal}>cancel</button>
 
                                             </div>
 
