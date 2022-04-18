@@ -119,7 +119,7 @@ const Login = () => {
                                             contentLabel="Example Modal"
                                         >
 
-                                            <h1 className='text-center text-white text-xl font-bold'>🤔 Are you sure for reset your password?</h1>
+                                            <h1 className='text-center text-white text-xl font-bold'>🤔 Are you sure for reset your password? 🔐</h1>
 
                                             <div className='flex justify-evenly mt-10'>
 

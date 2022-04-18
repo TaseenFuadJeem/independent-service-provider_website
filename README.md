@@ -1,70 +1,32 @@
-# Getting Started with Create React App
+# Steve's Lenses
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Steve Rogers is a professional photographer. He is an independent service provider. You can find his website here [Steve's Lenses](https://photographer-portfolio-8cbb0.web.app).
 
-## Available Scripts
+## Tools
 
-In the project directory, you can run:
+The tools i used for this project : 
 
-### `npm start`
+* I used ReactJS as a JavaScript library.
+* The CSS framework I used in this project is Tailwind CSS.
+* For Single Page Application I used React-Router package. 
+* Google Firebase is used for the authentication. 
+* I used Firebase for hosting this application.
+* React-toastify is used for displaying toast.
+* For modal, I applied React-Modal npm.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Let's talk about the features of this web application,
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* This application has a navigation bar with a logo.
+* The navbar has five routes and a login route.
+* It has a banner and description.
+* The homepage has a section about exploring the works of Steve.
+* The homepage, it has a section where people can know about which top companies with Steve worked.
+* In Gallery route, you can see some the popular photos of Steve Rogers.
+* Blogs route has some question and answerers.
+* The Course route is __protected__ with login. You must have to login first to access the courses. This route has some free photography courses from Steve Rogers.
+* In the about route, you can learn about The __Developer__ of this website.
+* The last route is login. You can login there with your email and password.
+* You can also login with Google.
+* This application is optimized for Large devices and mobile devices ONLY.
