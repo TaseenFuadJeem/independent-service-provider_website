@@ -18,7 +18,7 @@ const Blogs = () => {
 
                 <h1 className='text-3xl font-semibold'>What other Services does firebase provide other than authentication?</h1>
                 <p className='mt-10'>
-                    Firebase is originally developed by Firebase inc and later owned by Google. It provides a lots of Services that really helps you to your developments. You can develop high-quality mobile and web apps to grow your business and skills. It is compatible with all plat forms, like iOS, Android, Websites. With the help of Firebase, developers don't need to worry about the backend programming, Authentication, API development, database (real-time cloud-hosted NoSQL database and cloud firestore), File storage, etc. Firebase provides all the Services which every developers wants and Firebase give them with very efficient and fast performance.
+                    Firebase is mainly developed by Firebase inc. and later owned by Google. It provides a lots of opportunity that really helps you to your developments. You can develop high-quality mobile and web apps to grow your business and skills. It is stable with all platforms, like iOS, Android, Websites. With the help of Firebase, developers don't need to worry about the backend programming, Authentication, API development, database (real-time cloud-hosted NoSQL database and cloud firestore), File storage, etc. Firebase provides all the Services which every developers wants and Firebase give them with very efficient and fast performance.
                 </p>
 
             </div>

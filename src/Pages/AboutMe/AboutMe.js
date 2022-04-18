@@ -18,7 +18,7 @@ const AboutMe = () => {
                     <div className="text-center  font-light text-sm"><FontAwesomeIcon className='mr-2' icon={faLocationDot}></FontAwesomeIcon>Dhaka, Bangladesh</div>
                     <div className="px-6 text-center mt-2 font-light text-sm">
                         <p className='font-semibold'>
-                            " My name is Jeem. I have been very interested in technology since childhood. Now i want to be a developer. To me web-developing is not only a career option. It is also an emotion to me. I have found the right path for me. I want to walk on this path as far as I can. And I will not stop until i become a successful Web-Developer. "
+                            My name is Jeem. I have been very interested in technology since childhood. Now i want to be a developer. To me web-developing is not only a career option. It is also an emotion to me. I have found the right path for me. I want to walk on this path as far as I can. And I will not stop until i become a successful Web-Developer.
                         </p>
                     </div>
                     <hr className="mt-8" />
