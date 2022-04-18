@@ -25,7 +25,7 @@ const Gallery = () => {
 
             <div className="container mx-auto mb-16">
                 <ImageSearch searchText={(text) => setTerm(text)} />
-                {!isLoading && images.length === 0 && <h1 className="text-5xl text-center mx-auto mt-32">No Images Found</h1>}
+                {!isLoading && images.length === 0 && <h1 className="text-5xl text-center mx-auto my-32 font-bold">Opps!! No Image found 😥</h1>}
                 {isLoading ?
                     <Loading></Loading> :
                     <div className="grid grid-cols-3 gap-8 gallery">
