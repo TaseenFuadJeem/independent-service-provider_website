@@ -18,7 +18,7 @@ const Services = () => {
 
 
     return (
-        <>
+        <div className='mb-32'>
             <h1 className='text-center text-4xl font-bold mt-6'>Free Photography Courses</h1>
             <p className='text-center my-2'>user : {userEmail}</p>
 
@@ -73,7 +73,7 @@ const Services = () => {
 
             </div>
 
-        </>
+        </div>
     );
 };
 
