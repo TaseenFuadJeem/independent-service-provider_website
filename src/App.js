@@ -9,7 +9,7 @@ import Gallery from './Pages/Gallery/Gallery';
 import Navbar from './Pages/Navbar/Navbar';
 import NotFound from './Pages/NotFound/NotFound';
 import RequireAuth from './Pages/RequireAuth/RequireAuth';
-import Courses from './Pages/Courses/Courses';
+import Services from './Pages/Services/Services';
 import Signup from './Pages/Signup/Signup';
 
 function App() {
@@ -25,9 +25,9 @@ function App() {
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/signup' element={<Signup></Signup>}></Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
-        <Route path='/courses' element={
+        <Route path='/Services' element={
           <RequireAuth>
-            <Courses></Courses>
+            <Services></Services>
           </RequireAuth>
         }></Route>
         <Route path='/my-works' element={<Gallery></Gallery>}></Route>

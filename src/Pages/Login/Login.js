@@ -76,7 +76,7 @@ const Login = () => {
 
 
     if (googleUser || user) {
-        navigate('/courses')
+        navigate('/Services')
     }
 
     const handleLogin = event => {

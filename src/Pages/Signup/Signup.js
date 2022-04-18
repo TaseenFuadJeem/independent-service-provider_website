@@ -31,7 +31,7 @@ const Signup = () => {
     }
 
     if (user || googleUser) {
-        navigate('/courses');
+        navigate('/Services');
         alert('Your account successfully created')
     }
 

@@ -11,6 +11,7 @@ The tools i used for this project :
 * For Single Page Application I used React-Router package. 
 * Google Firebase is used for the authentication. 
 * I used Firebase for hosting this application.
+* Also used React-firebase-hook for easy authentication.
 * React-toastify is used for displaying toast.
 * For modal, I applied React-Modal npm.
 
@@ -25,7 +26,7 @@ Let's talk about the features of this web application,
 * The homepage, it has a section where people can know about which top companies with Steve worked.
 * In Gallery route, you can see some the popular photos of Steve Rogers.
 * Blogs route has some question and answerers.
-* The Course route is __protected__ with login. You must have to login first to access the courses. This route has some free photography courses from Steve Rogers.
+* The services route is __protected__ with login. You must have to login first to access the Services. This route has some free photography Services from Steve Rogers.
 * In the about route, you can learn about The __Developer__ of this website.
 * It has a footer with useful links. 
 * The last route is login. You can login there with your email and password.

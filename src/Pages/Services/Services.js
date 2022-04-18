@@ -1,12 +1,12 @@
 import React from 'react';
-import './Courses.css';
+import './Services.css';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import course1 from '../../Assets/course1.jpg';
 import course2 from '../../Assets/course2.jpg';
 import course3 from '../../Assets/course3.jpg';
 import auth from '../../firebase.init';
 
-const Courses = () => {
+const Services = () => {
 
     const [user] = useAuthState(auth);
 
@@ -19,14 +19,14 @@ const Courses = () => {
 
     return (
         <>
-
-            <p className='text-center mt-5'>user : {userEmail}</p>
+            <h1 className='text-center text-4xl font-bold mt-6'>Free Photography Courses</h1>
+            <p className='text-center my-2'>user : {userEmail}</p>
 
 
             <div className='grid lg:grid-cols-3  lg:px-32'>
 
 
-                <div className="lg:min-h-screen my-10  flex justify-center items-center">
+                <div className=" my-10  flex justify-center items-center">
                     <div className="container flex justify-center">
                         <div className="max-w-sm course-container">
                             <div className="bg-white shadow-2xl rounded-lg">
@@ -41,7 +41,7 @@ const Courses = () => {
                     </div>
                 </div>
 
-                <div className="lg:min-h-screen my-10  flex justify-center items-center">
+                <div className=" my-10  flex justify-center items-center">
                     <div className="container flex justify-center">
                         <div className="max-w-sm course-container">
                             <div className="bg-white shadow-2xl rounded-lg">
@@ -56,7 +56,7 @@ const Courses = () => {
                     </div>
                 </div>
 
-                <div className="lg:min-h-screen my-10  flex justify-center items-center">
+                <div className=" my-10  flex justify-center items-center">
                     <div className="container flex justify-center">
                         <div className="max-w-sm course-container">
                             <div className="bg-white shadow-2xl rounded-lg">
@@ -77,4 +77,4 @@ const Courses = () => {
     );
 };
 
-export default Courses;
+export default Services;
