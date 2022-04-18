@@ -7,10 +7,36 @@ import { useSendPasswordResetEmail } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import Loading from '../Loading/Loading';
 import { ToastContainer, toast } from 'react-toastify';
-
 import 'react-toastify/dist/ReactToastify.css';
+import Modal from 'react-modal';
+
+const customStyles = {
+    content: {
+        top: '50%',
+        left: '50%',
+        right: 'auto',
+        bottom: 'auto',
+        marginRight: '-50%',
+        transform: 'translate(-50%, -50%)',
+        borderRadius: '20px',
+
+    },
+};
+
+Modal.setAppElement('#root');
+
 
 const Login = () => {
+
+    const [modalIsOpen, setIsOpen] = React.useState(false);
+
+    function openModal() {
+        setIsOpen(true);
+    }
+
+    function closeModal() {
+        setIsOpen(false);
+    }
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -78,17 +104,39 @@ const Login = () => {
                                     </div>
                                     <div>
                                         <label htmlFor="password" className="block mb-1 text-gray-600 font-semibold">Password</label>
+
                                         <input onChange={(e) => setPassword(e.target.value)} type="password" className="bg-indigo-50 px-4 py-2 outline-none rounded-md w-full" />
-                                        <button onClick={async () => {
-                                            if (email === "") {
-                                                toast('Please enter your E-mail then reset your password')
-                                            }
-                                            else {
-                                                await sendPasswordResetEmail(email);
-                                                toast('Sent reset link. Check your E-mail');
-                                            }
-                                        }}
+
+                                        <button onClick={openModal}
                                             className='text-sm my-1 btn-disable text-gray-400 hover:text-gray-600'>Reset password</button>
+
+                                        <Modal
+                                            isOpen={modalIsOpen}
+                                            onRequestClose={closeModal}
+                                            style={customStyles}
+                                            contentLabel="Example Modal"
+                                        >
+
+                                            <h1 className='text-center text-3xl font-bold'>🤔 Are you sure for reset your password?</h1>
+
+                                            <div className='flex justify-evenly mt-10'>
+
+                                                <button className="px-4 py-2 bg-indigo-500 hover:bg-indigo-600 text-gray-50 rounded-xl flex items-center gap-2" onClick={async () => {
+                                                    if (email === "") {
+                                                        toast('Please enter your E-mail then reset your password')
+                                                    }
+                                                    else {
+                                                        await sendPasswordResetEmail(email);
+                                                        toast('Sent reset link. Check your E-mail');
+                                                    }
+                                                }} >Yes!!</button>
+
+                                                <button className="px-4 py-2 bg-indigo-500 hover:bg-indigo-600 text-gray-50 rounded-xl flex items-center gap-2" onClick={closeModal}>cancel</button>
+
+                                            </div>
+
+                                        </Modal>
+
                                         <ToastContainer></ToastContainer>
                                     </div>
                                 </div>
