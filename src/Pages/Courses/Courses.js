@@ -1,4 +1,5 @@
 import React from 'react';
+import './Courses.css';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import course1 from '../../Assets/course1.jpg';
 import course2 from '../../Assets/course2.jpg';
@@ -27,7 +28,7 @@ const Courses = () => {
 
                 <div className="lg:min-h-screen my-10  flex justify-center items-center">
                     <div className="container flex justify-center">
-                        <div className="max-w-sm ">
+                        <div className="max-w-sm course-container">
                             <div className="bg-white shadow-2xl rounded-lg">
                                 <img className="rounded-t-lg" src={course1} alt="" />
                                 <div className="py-6 px-8 rounded-lg bg-white">
@@ -42,7 +43,7 @@ const Courses = () => {
 
                 <div className="lg:min-h-screen my-10  flex justify-center items-center">
                     <div className="container flex justify-center">
-                        <div className="max-w-sm ">
+                        <div className="max-w-sm course-container">
                             <div className="bg-white shadow-2xl rounded-lg">
                                 <img className="rounded-t-lg" src={course2} alt="" />
                                 <div className="py-6 px-8 rounded-lg bg-white">
@@ -57,7 +58,7 @@ const Courses = () => {
 
                 <div className="lg:min-h-screen my-10  flex justify-center items-center">
                     <div className="container flex justify-center">
-                        <div className="max-w-sm ">
+                        <div className="max-w-sm course-container">
                             <div className="bg-white shadow-2xl rounded-lg">
                                 <img className="rounded-t-lg" src={course3} alt="" />
                                 <div className="py-6 px-8 rounded-lg bg-white">
