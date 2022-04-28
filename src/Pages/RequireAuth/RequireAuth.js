@@ -13,7 +13,7 @@ const RequireAuth = ({ children }) => {
         return <Loading></Loading>
     }
 
-    if (user) {
+    if (user && user?.photoURL) {
         return children;
     }
     else {

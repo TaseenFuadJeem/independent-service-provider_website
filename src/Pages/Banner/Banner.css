@@ -1,0 +1,21 @@
+.div-for-responsive {
+    position: absolute;
+    top: 40%;
+
+}
+
+@media only screen and (max-width: 768px) {
+    .text-to-responsive {
+        font-size: 25px;
+    }
+
+    .text-to-responsive2 {
+        font-size: 25.2px;
+    }
+
+
+    .div-for-responsive {
+        top: 35%;
+        padding: 24.5px;
+    }
+}

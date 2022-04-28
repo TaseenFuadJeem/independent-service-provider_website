@@ -14,7 +14,7 @@ const Navbar = () => {
     const [user] = useAuthState(auth);
 
     return (
-        <div className='sticky top-0'>
+        <div className='sticky top-0 z-50'>
 
             <nav className="bg-gray-200 shadow shadow-gray-300 w-100 px-8 md:px-auto">
                 <div className="md:h-16 h-28 mx-auto md:px-4 container flex items-center justify-between flex-wrap md:flex-nowrap">
@@ -32,7 +32,7 @@ const Navbar = () => {
                             <li className="md:px-4 md:py-2 hover:text-indigo-400"><NavLink to="/my-works">Gallery</NavLink></li>
                             <li className="md:px-4 md:py-2 hover:text-indigo-400"><NavLink to="/blogs">Blogs</NavLink></li>
                             <li className="md:px-4 md:py-2 hover:text-indigo-400"><NavLink to="/Services">Services</NavLink></li>
-                            <li className="md:px-4 md:py-2 hover:text-indigo-400"><NavLink to="/about-me">About</NavLink></li>
+                            <li title='About Developer' className="md:px-4 md:py-2 hover:text-indigo-400"><NavLink to="/about-me">About</NavLink></li>
                         </ul>
                     </div>
                     <div className="order-2 md:order-3">

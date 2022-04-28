@@ -6,15 +6,16 @@ Steve Rogers is a professional photographer. He is an independent service provid
 
 The tools i used for this project : 
 
-* I used ReactJS as a JavaScript library.
-* The CSS framework I used in this project is Tailwind CSS.
-* For Single Page Application I used React-Router package. 
-* Google Firebase is used for the authentication. 
-* I used Firebase for hosting this application.
-* Also used React-firebase-hook for easy authentication.
-* React-toastify is used for displaying toast.
-* For modal, I applied React-Modal npm.
-* I used pixabay API for gallery.
+* ReactJS as JavaScript library.
+* Tailwind CSS framework.
+* React-Router npm package for Single Page Application. 
+* Google Firebase for authentication. 
+* Hosting this application in firebase.
+* React-firebase-hook npm for easy firebase authentication.
+* React-toastify npm for displaying toast.
+* React-Modal npm for modal.
+* Pixabay.com API for gallery route.
+* React Reveal npm for animation.
 
 ## Features
 

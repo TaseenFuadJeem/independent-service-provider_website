@@ -6,7 +6,7 @@ import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { useSendPasswordResetEmail } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import Loading from '../Loading/Loading';
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Modal from 'react-modal';
 
@@ -95,6 +95,7 @@ const Login = () => {
                     :
 
                     <div className="h-screen bg-gradient-to-br from-blue-300 to-indigo-600 flex justify-center items-center w-full">
+
                         <form className='login-form' onSubmit={handleLogin}>
                             <div className="bg-white px-10 login-form py-8 rounded-xl w-screen shadow-md max-w-sm">
                                 <div className="space-y-4">
@@ -140,7 +141,6 @@ const Login = () => {
 
                                         </Modal>
 
-                                        <ToastContainer></ToastContainer>
                                     </div>
                                 </div>
                                 <button onClick={() => signInWithEmailAndPassword(email, password)} className="mt-4 w-full bg-gradient-to-tr bg-indigo-500  text-white py-2 rounded-md text-lg tracking-wide">Log in</button>
@@ -153,6 +153,7 @@ const Login = () => {
 
                             </div>
                         </form>
+
                     </div>
             }
 
